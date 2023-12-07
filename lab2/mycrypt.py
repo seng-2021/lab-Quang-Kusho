@@ -9,7 +9,7 @@ def encode(s):
     if len(s) > 1000:
         raise ValueError
     for c in s:
-        if c.isalpha() and ord(c) < ord('z') + 1:
+        if c.isalpha() and ord(c) <= ord('z'):
             if c.islower():
                 c=c.upper()
             # Rot13 the character for maximum security
